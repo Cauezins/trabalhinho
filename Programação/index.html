@@ -4,40 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <title>lala</title>
-    <script>
-        $(document).ready(() => {
-            $('form').on('submit', e => {
-                e.preventDefault();
-                $.ajax({
-                    type: 'POST',
-                    url: 'app.php',
-                    data: $(e.target).serialize(),
-                    success: e => {
-                        $('#status').html('<strong>'+e+'</strong>')
-                        console.log(e);
-                    },
-                    error: e => {console.log(e);}
-                })
-            })
-        })   
-            
-    </script>
+    <title>Document</title>
 </head>
 <body>
-    <div class="container">
-        <form method="get">
-            <input type="text" name="email" placeholder="Escreva o seu email"> 
-            <input type="password" name="senha" placeholder="Escreva a sua senha"> 
-            <input type="submit" value="cadastre-se">
-        </form>
-        <div id="status">
-
-        </div>
-    </div>
-        
-    
+    <a href="views/cadastro.phtml">cadastro</a>
+    <a href="views/login.phtml">login</a>
 </body>
 </html>
